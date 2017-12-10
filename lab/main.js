@@ -1,3 +1,7 @@
-const pozdrav = (jmeno) => console.log(`zdar ${jmeno}`);
+import { createFirstScene, mainCanvasEngine } from "./src/lab.js";
 
-pozdrav("cus kamo");
+const scene = createFirstScene();
+
+mainCanvasEngine.runRenderLoop(() => {
+    scene.render();
+});
