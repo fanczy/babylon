@@ -1,7 +1,5 @@
-import { createFirstScene, mainCanvasEngine } from "./src/lab.js";
-
-const scene = createFirstScene();
+import { mainCanvasEngine, mainScene } from "./src/lab.js";
 
 mainCanvasEngine.runRenderLoop(() => {
-    scene.render();
+    mainScene.render();
 });
