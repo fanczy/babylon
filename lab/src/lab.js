@@ -1,5 +1,3 @@
-export const pozdrav = (jmeno) => console.log(`zdar ${jmeno}`);
-
 export const mainCanvas = document.getElementById("main-canvas");
 export const mainCanvasEngine = new BABYLON.Engine(mainCanvas, true);
 export const mainScene = new BABYLON.Scene(mainCanvasEngine);
@@ -26,24 +24,16 @@ const setMeshPositionAndMaterial = (mesh, positionVector, material) => {
     mesh.material = material || wireFrameMaterial;
 }
 
-const addBox = (id, positionVector, material) => {
-    const box = BABYLON.MeshBuilder.CreateBox(id, {size: 100} , mainScene);
+const addBox = (id, size, positionVector, material) => {
+    const box = BABYLON.MeshBuilder.CreateBox(id, {size: size || 100} , mainScene);
     setMeshPositionAndMaterial(box, positionVector, material);
 }
 
-const addSphere = (id, positionVector, material) => {
-    const sphere = BABYLON.MeshBuilder.CreateSphere(id, {diameter: 1000}, mainScene);
+const addSphere = (id, diameter,  positionVector, material) => {
+    const sphere = BABYLON.MeshBuilder.CreateSphere(id, {diameter: diameter || 100}, mainScene);
     setMeshPositionAndMaterial(sphere, positionVector, material);
 }
 
-const addPlane = (id, positionVector, material) => {
-    const plane = BABYLON.MeshBuilder.CreatePlane(id, {size: 200}, mainScene)
-    plane.rotate(BABYLON.Axis.X, Math.PI / 2);
-    setMeshPositionAndMaterial(plane, positionVector, material);
-}
-
-
-
-
-addBox("box1", null, blueWireFrameMaterial);
-addSphere("sphere");
+addBox("box1", 50 , null, blueWireFrameMaterial);
+addSphere("sphere", 500);
+addSphere("sphere2", 10, BABYLON.Vector3(200,100,100));
