@@ -1,6 +1,5 @@
- import { createUniversalCamera } from '../cameras/universal-camera.js'
- import { createFollowCamera } from '../cameras/follow-camera.js'
-import { createFreeCamera } from '../cameras/free-camera.js'
+import { createUniversalCamera } from '../cameras/universal-camera.js'
+import { createFollowCamera } from '../cameras/follow-camera.js'
 import { ship } from './main-scene-setup.js'
 import mainScene from '../scenes/main-scene.js'
 import mainCanvas from '../canvas/main-canvas.js';
