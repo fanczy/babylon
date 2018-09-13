@@ -3,17 +3,21 @@
 import { createFreeCamera } from '../cameras/free-camera.js'
 import { ship } from './main-scene-setup.js'
 import mainScene from '../scenes/main-scene.js'
-
-export let freeCamera; 
+import mainCanvas from '../canvas/main-canvas.js';
 
 export const setupMainCamera = () => {
-    // createUniversalCamera();
+    const universalCamera = createUniversalCamera();
 
-    freeCamera = createFreeCamera();
-    freeCamera.parent = ship;
-    freeCamera.position.y -= 25;
-    freeCamera.position.z -= 5;
-    freeCamera.setTarget(ship.position);
+    universalCamera.parent = ship;
+
+    universalCamera.position.y -= 25;
+    universalCamera.position.z -= 5;
+
+    universalCamera.rotation.x = Math.PI /2;
+
+    universalCamera.setTarget(ship.position);
+
+    //universalCamera.attachControl(mainCanvas);
 
     // const freeCamera = createFreeCamera();
     // freeCamera.position = new BABYLON.Vector3(0, 0, -250);
