@@ -13,8 +13,8 @@ export const setupMainCamera = () => {
 
     cameraCoT.rotate(BABYLON.Axis.X, Math.PI /2 * -1, BABYLON.Space.LOCAL);
     cameraCoT.locallyTranslate(new BABYLON.Vector3(0,15,-50));
-    const universalCamera = createUniversalCamera();
-    universalCamera.parent = cameraCoT;
+    const camera = createUniversalCamera();
+    camera.parent = cameraCoT;
 
     console.log("camera set up")
 }
