@@ -45,10 +45,7 @@ export const setupControls = () => {
 
         if(inputMap["i"]){
             ship.locallyTranslate(new BABYLON.Vector3(0, movementSpeed, 0));
-
-            // let direction = new BABYLON.Vector3(ship.position)
-
-            // let matrix = BABYLON.Matrix.RotationAxis(BABYLON.Axis.Y, diffAngle - (Math.PI * -1));
+            
         } 
 
         if(inputMap["k"]){
