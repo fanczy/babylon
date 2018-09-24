@@ -8,7 +8,7 @@ import mainScene from '../scenes/main-scene.js'
 export let ship;
 
 export const setupMainScene = () => {
-    createSphere("bigassSphere", 500);
+    createSphere("bigassSphere", 100);
     createBox("blueBox", 50, new BABYLON.Vector3(0,0,0) , greenWireFrame);
     ship = createShip("ship", 5, new BABYLON.Vector3(0, 100, 0), redWireFrame);
 
